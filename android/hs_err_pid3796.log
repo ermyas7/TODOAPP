@@ -1,0 +1,844 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ff1adedb783, pid=3796, tid=0x00007ff1af1eeb80
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_201-b09) (build 1.8.0_201-b09)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.201-b09 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x90b783]  SR_handler(int, siginfo*, ucontext*)+0x33
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000128
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007ff1af1ed700, RCX=0x00007ff1aedced2d, RDX=0x00007ff1af1eeea0
+RSP=0x00007ffe637e2400, RBP=0x00007ffe637e24b0, RSI=0x00007ffe637e25f0, RDI=0x0000000000000001
+R8 =0x00000000000000ca, R9 =0x00007ff1af1ed9d0, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x00007ff1af1eeb00, R13=0x0000000000000002, R14=0x00007ffe637e25f0, R15=0x00007ffe637e24c0
+RIP=0x00007ff1adedb783, EFLAGS=0x0000000000010246, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffe637e2400)
+0x00007ffe637e2400:   00007ff1ae5ca9d0 00007ff1aeff3312
+0x00007ffe637e2410:   0000000000000000 0000ffff00001fa0
+0x00007ffe637e2420:   36393733637e2950 cc7e5d19035e1300
+0x00007ffe637e2430:   00007ffe637e2470 00007ffe637e2470
+0x00007ffe637e2440:   000000000000003f 00007ff1ae12aca7
+0x00007ffe637e2450:   00007ffe637e2608 00000000016f65c0
+0x00007ffe637e2460:   00007ffe637e26e0 00007ff1ae641910
+0x00007ffe637e2470:   00000000fbad8001 00007ffe637e26e0
+0x00007ffe637e2480:   00007ffe637e26e0 00007ff1af1ed700
+0x00007ffe637e2490:   0000000000000000 00007ffe637e2b80
+0x00007ffe637e24a0:   0000000000000000 0000000000000001
+0x00007ffe637e24b0:   00007ffe637e2be8 00007ff1aedd8890
+0x00007ffe637e24c0:   0000000000000007 0000000000000000
+0x00007ffe637e24d0:   0000000000000000 00007ff100000002
+0x00007ffe637e24e0:   0000000000000000 00000000000000ca
+0x00007ffe637e24f0:   00007ff1af1ed9d0 0000000000000000
+0x00007ffe637e2500:   0000000000000246 0000000000000000
+0x00007ffe637e2510:   00007ffe637e2b80 0000000000000000
+0x00007ffe637e2520:   0000000000000001 00007ff1af1ed9d0
+0x00007ffe637e2530:   0000000000000000 00007ffe637e2be8
+0x00007ffe637e2540:   00007ff1af1ed700 0000000000000edf
+0x00007ffe637e2550:   00000000000000ca 00007ff1aedced2d
+0x00007ffe637e2560:   00007ffe637e2b70 00007ff1aedced2b
+0x00007ffe637e2570:   0000000000000246 002b000000000033
+0x00007ffe637e2580:   0000000000000000 0000000000000000
+0x00007ffe637e2590:   0000000000000000 0000000000000000
+0x00007ffe637e25a0:   00007ffe637e2680 00007ffe637e26e8
+0x00007ffe637e25b0:   00007ff1af1f1748 00007ff1af1f0000
+0x00007ffe637e25c0:   0000000000000000 00007ff1aeff01ef
+0x00007ffe637e25d0:   0000000000000004 00007ff1aeff6754
+0x00007ffe637e25e0:   0000000000000001 0000000000000000
+0x00007ffe637e25f0:   000000000000000c 00007ff100000000 
+
+Instructions: (pc=0x00007ff1adedb783)
+0x00007ff1adedb763:   48 81 ec 88 00 00 00 e8 81 1d 8f ff 44 8b 28 49
+0x00007ff1adedb773:   89 c4 48 8d 05 2c 61 68 00 8b 38 e8 15 2c 8f ff
+0x00007ff1adedb783:   48 8b 98 28 01 00 00 8b 83 a8 00 00 00 83 f8 01
+0x00007ff1adedb793:   74 1b 45 89 2c 24 48 81 c4 88 00 00 00 5b 41 5c 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007ff1af1ed700 is pointing into the stack for thread: 0x00007ff1a800b000
+RCX=0x00007ff1aedced2d: <offset 0x8d2d> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007ff1aedc6000
+RDX=0x00007ff1af1eeea0 is an unknown value
+RSP=0x00007ffe637e2400 is an unknown value
+RBP=0x00007ffe637e24b0 is an unknown value
+RSI=0x00007ffe637e25f0 is an unknown value
+RDI=0x0000000000000001 is an unknown value
+R8 =0x00000000000000ca is an unknown value
+R9 =0x00007ff1af1ed9d0 is pointing into the stack for thread: 0x00007ff1a800b000
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x00007ff1af1eeb00 is an unknown value
+R13=0x0000000000000002 is an unknown value
+R14=0x00007ffe637e25f0 is an unknown value
+R15=0x00007ffe637e24c0 is an unknown value
+
+
+Stack: [0x00007ffe636eb000,0x00007ffe637eb000],  sp=0x00007ffe637e2400,  free space=989k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x90b783]  SR_handler(int, siginfo*, ucontext*)+0x33
+C  [libpthread.so.0+0x12890]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000085800000, size: 1960 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 36864K, used 16057K [0x00000000d7300000, 0x00000000d9c00000, 0x0000000100000000)
+  eden space 31744K, 34% used [0x00000000d7300000,0x00000000d7db05d8,0x00000000d9200000)
+  from space 5120K, 99% used [0x00000000d9200000,0x00000000d96fdee8,0x00000000d9700000)
+  to   space 5120K, 0% used [0x00000000d9700000,0x00000000d9700000,0x00000000d9c00000)
+ ParOldGen       total 84992K, used 114K [0x0000000085800000, 0x000000008ab00000, 0x00000000d7300000)
+  object space 84992K, 0% used [0x0000000085800000,0x000000008581c968,0x000000008ab00000)
+ Metaspace       used 11141K, capacity 11446K, committed 11648K, reserved 1058816K
+  class space    used 1488K, capacity 1603K, committed 1664K, reserved 1048576K
+
+Card table byte_map: [0x00007ff19886b000,0x00007ff198c40000] byte_map_base: 0x00007ff19843f000
+
+Marking Bits: (ParMarkBitMap*) 0x00007ff1ae59bd80
+ Begin Bits: [0x00007ff194196000, 0x00007ff196036000)
+ End Bits:   [0x00007ff196036000, 0x00007ff197ed6000)
+
+Polling page: 0x00007ff1af20b000
+
+CodeCache: size=245760Kb used=3160Kb max_used=3160Kb free=242599Kb
+ bounds [0x00007ff199000000, 0x00007ff199320000, 0x00007ff1a8000000]
+ total_blobs=1249 nmethods=898 adapters=265
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 4.719 Thread 0x00007ff1a80c9000  894       3       java.util.concurrent.locks.AbstractQueuedSynchronizer::compareAndSetState (13 bytes)
+Event: 4.720 Thread 0x00007ff1a80c9000 nmethod 894 0x00007ff1993125d0 code [0x00007ff199312720, 0x00007ff199312890]
+Event: 4.720 Thread 0x00007ff1a80c9000  895       1       java.lang.Enum::name (5 bytes)
+Event: 4.720 Thread 0x00007ff1a80c9000 nmethod 895 0x00007ff199312310 code [0x00007ff199312460, 0x00007ff199312570]
+Event: 4.720 Thread 0x00007ff1a80c9000  896       3       java.util.ArrayList$Itr::<init> (26 bytes)
+Event: 4.720 Thread 0x00007ff1a80c9000 nmethod 896 0x00007ff199311f10 code [0x00007ff199312080, 0x00007ff199312250]
+Event: 4.720 Thread 0x00007ff1a80c9000  897       3       java.util.concurrent.locks.AbstractQueuedSynchronizer::release (33 bytes)
+Event: 4.721 Thread 0x00007ff1a80c9000 nmethod 897 0x00007ff199311990 code [0x00007ff199311b20, 0x00007ff199311e38]
+Event: 5.020 Thread 0x00007ff1a80c9000  898       1       org.gradle.internal.logging.console.ProgressOperation::getParent (5 bytes)
+Event: 5.020 Thread 0x00007ff1a80c9000 nmethod 898 0x00007ff1993116d0 code [0x00007ff199311820, 0x00007ff199311930]
+
+GC Heap History (2 events):
+Event: 0.425 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 36864K, used 31744K [0x00000000d7300000, 0x00000000d9c00000, 0x0000000100000000)
+  eden space 31744K, 100% used [0x00000000d7300000,0x00000000d9200000,0x00000000d9200000)
+  from space 5120K, 0% used [0x00000000d9700000,0x00000000d9700000,0x00000000d9c00000)
+  to   space 5120K, 0% used [0x00000000d9200000,0x00000000d9200000,0x00000000d9700000)
+ ParOldGen       total 84992K, used 0K [0x0000000085800000, 0x000000008ab00000, 0x00000000d7300000)
+  object space 84992K, 0% used [0x0000000085800000,0x0000000085800000,0x000000008ab00000)
+ Metaspace       used 9091K, capacity 9266K, committed 9600K, reserved 1056768K
+  class space    used 1240K, capacity 1325K, committed 1408K, reserved 1048576K
+Event: 0.430 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 36864K, used 5111K [0x00000000d7300000, 0x00000000d9c00000, 0x0000000100000000)
+  eden space 31744K, 0% used [0x00000000d7300000,0x00000000d7300000,0x00000000d9200000)
+  from space 5120K, 99% used [0x00000000d9200000,0x00000000d96fdee8,0x00000000d9700000)
+  to   space 5120K, 0% used [0x00000000d9700000,0x00000000d9700000,0x00000000d9c00000)
+ ParOldGen       total 84992K, used 114K [0x0000000085800000, 0x000000008ab00000, 0x00000000d7300000)
+  object space 84992K, 0% used [0x0000000085800000,0x000000008581c968,0x000000008ab00000)
+ Metaspace       used 9091K, capacity 9266K, committed 9600K, reserved 1056768K
+  class space    used 1240K, capacity 1325K, committed 1408K, reserved 1048576K
+}
+
+Deoptimization events (6 events):
+Event: 0.124 Thread 0x00007ff1a800b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ff1991937b4 method=java.lang.String.startsWith(Ljava/lang/String;I)Z @ 25
+Event: 0.154 Thread 0x00007ff1a800b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ff19918253c method=java.util.regex.Matcher.reset()Ljava/util/regex/Matcher; @ 47
+Event: 0.376 Thread 0x00007ff1a800b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ff19928f01c method=java.util.HashMap.hash(Ljava/lang/Object;)I @ 1
+Event: 0.376 Thread 0x00007ff1a800b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ff1991b4728 method=java.util.HashMap.hash(Ljava/lang/Object;)I @ 1
+Event: 0.416 Thread 0x00007ff1a800b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007ff19923dda4 method=java.util.HashMap.getNode(ILjava/lang/Object;)Ljava/util/HashMap$Node; @ 129
+Event: 0.416 Thread 0x00007ff1a800b000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007ff19929cc44 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 203
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.384 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8d69d70) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.385 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8d7eac8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.385 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8d82cd0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.388 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8deeb48) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.388 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8deff10) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.388 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8df1590) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.388 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8df26c8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.388 Thread 0x00007ff1a800b000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d8df5d78) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]
+Event: 0.394 Thread 0x00007ff1a800b000 Exception <a 'java/lang/NoClassDefFoundError': org/slf4j/impl/StaticMarkerBinder> (0x00000000d8eb6d48) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 199]
+Event: 1.452 Thread 0x00007ff1a800b000 Exception <a 'java/net/SocketException': Protocol family unavailable> (0x00000000d7ba8150) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u201/12317/hotspot/src/share/vm/prims/jni.cpp, line 735]
+
+Events (10 events):
+Event: 4.400 loading class sun/reflect/Label done
+Event: 4.400 loading class sun/reflect/Label$PatchInfo
+Event: 4.400 loading class sun/reflect/Label$PatchInfo done
+Event: 4.401 loading class sun/reflect/MethodAccessorGenerator$1
+Event: 4.401 loading class sun/reflect/MethodAccessorGenerator$1 done
+Event: 4.401 loading class sun/reflect/ClassDefiner
+Event: 4.401 loading class sun/reflect/ClassDefiner done
+Event: 4.401 loading class sun/reflect/ClassDefiner$1
+Event: 4.401 loading class sun/reflect/ClassDefiner$1 done
+Event: 5.289 Thread 0x00007ff1a8981000 Thread exited: 0x00007ff1a8981000
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:06 8013769                            /usr/lib/jvm/jdk1.8.0_201/bin/java
+00600000-00601000 r--p 00000000 08:06 8013769                            /usr/lib/jvm/jdk1.8.0_201/bin/java
+00601000-00602000 rw-p 00001000 08:06 8013769                            /usr/lib/jvm/jdk1.8.0_201/bin/java
+016f6000-019c4000 rw-p 00000000 00:00 0                                  [heap]
+85800000-8ab00000 rw-p 00000000 00:00 0 
+8ab00000-d7300000 ---p 00000000 00:00 0 
+d7300000-d9c00000 rw-p 00000000 00:00 0 
+d9c00000-100000000 ---p 00000000 00:00 0 
+100000000-1001a0000 rw-p 00000000 00:00 0 
+1001a0000-140000000 ---p 00000000 00:00 0 
+7ff130000000-7ff130021000 rw-p 00000000 00:00 0 
+7ff130021000-7ff134000000 ---p 00000000 00:00 0 
+7ff138000000-7ff138021000 rw-p 00000000 00:00 0 
+7ff138021000-7ff13c000000 ---p 00000000 00:00 0 
+7ff13c000000-7ff13c021000 rw-p 00000000 00:00 0 
+7ff13c021000-7ff140000000 ---p 00000000 00:00 0 
+7ff140000000-7ff140021000 rw-p 00000000 00:00 0 
+7ff140021000-7ff144000000 ---p 00000000 00:00 0 
+7ff144000000-7ff144029000 rw-p 00000000 00:00 0 
+7ff144029000-7ff148000000 ---p 00000000 00:00 0 
+7ff148000000-7ff148249000 rw-p 00000000 00:00 0 
+7ff148249000-7ff14c000000 ---p 00000000 00:00 0 
+7ff14c000000-7ff14c021000 rw-p 00000000 00:00 0 
+7ff14c021000-7ff150000000 ---p 00000000 00:00 0 
+7ff150000000-7ff150207000 rw-p 00000000 00:00 0 
+7ff150207000-7ff154000000 ---p 00000000 00:00 0 
+7ff154000000-7ff154235000 rw-p 00000000 00:00 0 
+7ff154235000-7ff158000000 ---p 00000000 00:00 0 
+7ff158000000-7ff158021000 rw-p 00000000 00:00 0 
+7ff158021000-7ff15c000000 ---p 00000000 00:00 0 
+7ff15c000000-7ff15c264000 rw-p 00000000 00:00 0 
+7ff15c264000-7ff160000000 ---p 00000000 00:00 0 
+7ff160000000-7ff160021000 rw-p 00000000 00:00 0 
+7ff160021000-7ff164000000 ---p 00000000 00:00 0 
+7ff164000000-7ff164021000 rw-p 00000000 00:00 0 
+7ff164021000-7ff168000000 ---p 00000000 00:00 0 
+7ff168000000-7ff168021000 rw-p 00000000 00:00 0 
+7ff168021000-7ff16c000000 ---p 00000000 00:00 0 
+7ff16c000000-7ff16c021000 rw-p 00000000 00:00 0 
+7ff16c021000-7ff170000000 ---p 00000000 00:00 0 
+7ff170000000-7ff170021000 rw-p 00000000 00:00 0 
+7ff170021000-7ff174000000 ---p 00000000 00:00 0 
+7ff17644c000-7ff17644f000 ---p 00000000 00:00 0 
+7ff17644f000-7ff17654d000 rw-p 00000000 00:00 0 
+7ff17654d000-7ff176550000 ---p 00000000 00:00 0 
+7ff176550000-7ff176586000 rw-p 00000000 00:00 0 
+7ff176586000-7ff176589000 ---p 00000000 00:00 0 
+7ff176589000-7ff176847000 rw-p 00000000 00:00 0 
+7ff176847000-7ff176887000 ---p 00000000 00:00 0 
+7ff176887000-7ff176890000 r-xp 00000000 08:06 10888336                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libmanagement.so
+7ff176890000-7ff176a8f000 ---p 00009000 08:06 10888336                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libmanagement.so
+7ff176a8f000-7ff176a90000 r--p 00008000 08:06 10888336                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libmanagement.so
+7ff176a90000-7ff176a91000 rw-p 00009000 08:06 10888336                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libmanagement.so
+7ff176a91000-7ff176a94000 ---p 00000000 00:00 0 
+7ff176a94000-7ff176b92000 rw-p 00000000 00:00 0 
+7ff176b92000-7ff176b94000 r-xp 00000000 08:06 9065339                    /home/ermicho/.gradle/native/jansi/1.14/linux64/libjansi.so
+7ff176b94000-7ff176d93000 ---p 00002000 08:06 9065339                    /home/ermicho/.gradle/native/jansi/1.14/linux64/libjansi.so
+7ff176d93000-7ff176d94000 rw-p 00001000 08:06 9065339                    /home/ermicho/.gradle/native/jansi/1.14/linux64/libjansi.so
+7ff176d94000-7ff176db9000 r-xp 00000000 08:06 3937134                    /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7ff176db9000-7ff176fb9000 ---p 00025000 08:06 3937134                    /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7ff176fb9000-7ff176fbd000 r--p 00025000 08:06 3937134                    /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7ff176fbd000-7ff176fbe000 rw-p 00029000 08:06 3937134                    /lib/x86_64-linux-gnu/libtinfo.so.5.9
+7ff176fbe000-7ff176fdf000 r-xp 00000000 08:06 3937049                    /lib/x86_64-linux-gnu/libncurses.so.5.9
+7ff176fdf000-7ff1771df000 ---p 00021000 08:06 3937049                    /lib/x86_64-linux-gnu/libncurses.so.5.9
+7ff1771df000-7ff1771e0000 r--p 00021000 08:06 3937049                    /lib/x86_64-linux-gnu/libncurses.so.5.9
+7ff1771e0000-7ff1771e1000 rw-p 00022000 08:06 3937049                    /lib/x86_64-linux-gnu/libncurses.so.5.9
+7ff1771e1000-7ff1771e4000 r-xp 00000000 08:06 9065345                    /home/ermicho/.gradle/native/25/linux-amd64-ncurses5/libnative-platform-curses.so
+7ff1771e4000-7ff1773e4000 ---p 00003000 08:06 9065345                    /home/ermicho/.gradle/native/25/linux-amd64-ncurses5/libnative-platform-curses.so
+7ff1773e4000-7ff1773e5000 rw-p 00003000 08:06 9065345                    /home/ermicho/.gradle/native/25/linux-amd64-ncurses5/libnative-platform-curses.so
+7ff1773e5000-7ff1773fc000 r-xp 00000000 08:06 3936880                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff1773fc000-7ff1775fb000 ---p 00017000 08:06 3936880                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff1775fb000-7ff1775fc000 r--p 00016000 08:06 3936880                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff1775fc000-7ff1775fd000 rw-p 00017000 08:06 3936880                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7ff1775fd000-7ff177776000 r-xp 00000000 08:06 657556                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7ff177776000-7ff177976000 ---p 00179000 08:06 657556                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7ff177976000-7ff177980000 r--p 00179000 08:06 657556                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7ff177980000-7ff177982000 rw-p 00183000 08:06 657556                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7ff177982000-7ff177986000 rw-p 00000000 00:00 0 
+7ff177999000-7ff1779a0000 r--s 00000000 08:06 920324                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7ff1779a0000-7ff1779a5000 r-xp 00000000 08:06 9065331                    /home/ermicho/.gradle/native/25/linux-amd64/libnative-platform.so
+7ff1779a5000-7ff177ba4000 ---p 00005000 08:06 9065331                    /home/ermicho/.gradle/native/25/linux-amd64/libnative-platform.so
+7ff177ba4000-7ff177ba5000 rw-p 00004000 08:06 9065331                    /home/ermicho/.gradle/native/25/linux-amd64/libnative-platform.so
+7ff177ba5000-7ff177ba7000 r--s 00006000 08:06 131431                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-wrapper-4.10.2.jar
+7ff177ba7000-7ff177bb6000 r--s 0004b000 08:06 131430                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-tooling-api-4.10.2.jar
+7ff177bb6000-7ff177bb8000 r--s 00002000 08:06 131427                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-stdlib-jdk8-1.2.61.jar
+7ff177bb8000-7ff177bb9000 r--s 00000000 08:06 131426                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-stdlib-jdk7-1.2.61.jar
+7ff177bb9000-7ff177bbf000 r--s 00015000 08:06 131425                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-stdlib-common-1.2.61.jar
+7ff177bbf000-7ff177bcf000 r--s 000db000 08:06 131424                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-stdlib-1.2.61.jar
+7ff177bcf000-7ff177bd1000 r--s 00009000 08:06 131423                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-script-runtime-1.2.61.jar
+7ff177bd1000-7ff177bd2000 r--s 00002000 08:06 131422                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-sam-with-receiver-compiler-plugin-1.2.61.jar
+7ff177bd2000-7ff177c07000 r--s 00241000 08:06 131421                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-reflect-1.2.61.jar
+7ff177c07000-7ff177dd2000 r--s 019b7000 08:06 131420                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kotlin-compiler-embeddable-1.2.61.jar
+7ff177dd2000-7ff177dd4000 r--s 00000000 08:06 131419                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-kotlin-dsl-tooling-models-1.0-rc-6.jar
+7ff177dd4000-7ff177dd6000 r--s 00003000 08:06 131415                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/annotations-13.0.jar
+7ff177dd6000-7ff177dea000 r--s 00109000 08:06 131416                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-kotlin-dsl-1.0-rc-6.jar
+7ff177dea000-7ff177dee000 r--s 00013000 08:06 131436                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-build-cache-4.10.2.jar
+7ff177dee000-7ff177dff000 r-xp 00000000 08:06 10888331                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnio.so
+7ff177dff000-7ff177ffe000 ---p 00011000 08:06 10888331                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnio.so
+7ff177ffe000-7ff177fff000 r--p 00010000 08:06 10888331                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnio.so
+7ff177fff000-7ff178000000 rw-p 00011000 08:06 10888331                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnio.so
+7ff178000000-7ff178021000 rw-p 00000000 00:00 0 
+7ff178021000-7ff17c000000 ---p 00000000 00:00 0 
+7ff17c000000-7ff17c006000 r--s 00034000 08:06 131437                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-persistent-cache-4.10.2.jar
+7ff17c006000-7ff17c00b000 r--s 00015000 08:06 131440                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-resources-4.10.2.jar
+7ff17c00b000-7ff17c00c000 r--s 00003000 08:06 131447                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-build-option-4.10.2.jar
+7ff17c00c000-7ff17c00d000 r--s 00006000 08:06 131448                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-cli-4.10.2.jar
+7ff17c00d000-7ff17c00f000 r--s 00004000 08:06 131460                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/log4j-over-slf4j-1.7.16.jar
+7ff17c00f000-7ff17c011000 r--s 00000000 08:06 131459                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/jul-to-slf4j-1.7.16.jar
+7ff17c011000-7ff17c013000 r--s 00003000 08:06 131458                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/jcl-over-slf4j-1.7.16.jar
+7ff17c013000-7ff17c01b000 r--s 00035000 08:06 131438                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-logging-4.10.2.jar
+7ff17c01b000-7ff17c02a000 r--s 00085000 08:06 131443                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-model-core-4.10.2.jar
+7ff17c02a000-7ff17c02c000 r--s 00006000 08:06 131444                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-base-services-groovy-4.10.2.jar
+7ff17c02c000-7ff17c02e000 r--s 00007000 08:06 131442                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-model-groovy-4.10.2.jar
+7ff17c02e000-7ff17c02f000 r--s 00006000 08:06 131449                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-docs-4.10.2.jar
+7ff17c02f000-7ff17c038000 r--s 0002d000 08:06 131472                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/xml-apis-1.4.01.jar
+7ff17c038000-7ff17c039000 r--s 00000000 08:06 131468                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/javax.inject-1.jar
+7ff17c039000-7ff17c0aa000 r--s 00665000 08:06 131466                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/groovy-all-2.4.15.jar
+7ff17c0aa000-7ff17c0b4000 r--s 00078000 08:06 131471                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/commons-compress-1.14.jar
+7ff17c0b4000-7ff17c0c1000 r--s 00083000 08:06 131469                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/commons-collections-3.2.2.jar
+7ff17c0c1000-7ff17c0c2000 r--s 00007000 08:06 131451                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/asm-analysis-6.2.jar
+7ff17c0c2000-7ff17c0c4000 r--s 0000b000 08:06 131452                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/asm-tree-6.2.jar
+7ff17c0c4000-7ff17c0c6000 r--s 00012000 08:06 131450                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/asm-commons-6.2.jar
+7ff17c0c6000-7ff17c0c7000 r--s 00004000 08:06 131475                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-freebsd-amd64-libcpp-0.14.jar
+7ff17c0c7000-7ff17c0c8000 r--s 00004000 08:06 131476                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-freebsd-amd64-libstdcpp-0.14.jar
+7ff17c0c8000-7ff17c0c9000 r--s 00004000 08:06 131477                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-freebsd-i386-libcpp-0.14.jar
+7ff17c0c9000-7ff17c0ca000 r--s 00003000 08:06 131478                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-freebsd-i386-libstdcpp-0.14.jar
+7ff17c0ca000-7ff17c0cb000 r--s 00002000 08:06 131479                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-linux-amd64-0.14.jar
+7ff17c0cb000-7ff17c0cc000 r--s 00002000 08:06 131480                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-linux-i386-0.14.jar
+7ff17c0cc000-7ff17c0ce000 r--s 00002000 08:06 131481                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-osx-amd64-0.14.jar
+7ff17c0ce000-7ff17c0cf000 r--s 00003000 08:06 131482                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-osx-i386-0.14.jar
+7ff17c0cf000-7ff17c0d1000 r--s 0000b000 08:06 131483                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-windows-amd64-0.14.jar
+7ff17c0d1000-7ff17c0d2000 r--s 0000b000 08:06 131484                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-windows-i386-0.14.jar
+7ff17c0d2000-7ff17c0d3000 r--s 00001000 08:06 131485                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-linux-amd64-ncurses5-0.14.jar
+7ff17c0d3000-7ff17c0d4000 r--s 00001000 08:06 131486                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-linux-amd64-ncurses6-0.14.jar
+7ff17c0d4000-7ff17c0d5000 r--s 00001000 08:06 131487                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-linux-i386-ncurses5-0.14.jar
+7ff17c0d5000-7ff17c0d6000 r--s 00001000 08:06 131488                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-linux-i386-ncurses6-0.14.jar
+7ff17c0d6000-7ff17c0da000 r--s 00012000 08:06 131470                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/native-platform-0.14.jar
+7ff17c0da000-7ff17c0dd000 r--s 00023000 08:06 131473                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/jansi-1.14.jar
+7ff17c0dd000-7ff17c0e1000 r--s 0000c000 08:06 131441                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-native-4.10.2.jar
+7ff17c0e1000-7ff17c0e3000 r--s 0000f000 08:06 131454                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/reflectasm-1.07-shaded.jar
+7ff17c0e3000-7ff17c0e5000 r--s 00000000 08:06 131489                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/minlog-1.2.jar
+7ff17c0e5000-7ff17c0e7000 r--s 00007000 08:06 131490                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/objenesis-1.2.jar
+7ff17c0e7000-7ff17c10f000 r--s 001cf000 08:06 131462                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/guava-jdk5-17.0.jar
+7ff17c10f000-7ff17c12e000 r--s 001d9000 08:06 131467                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/ant-1.9.11.jar
+7ff17c12e000-7ff17c174000 r--s 00265000 08:06 131433                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-core-4.10.2.jar
+7ff17c174000-7ff17c181000 r--s 00037000 08:06 131435                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-core-api-4.10.2.jar
+7ff17c181000-7ff17c197000 r-xp 00000000 08:06 10888328                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnet.so
+7ff17c197000-7ff17c397000 ---p 00016000 08:06 10888328                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnet.so
+7ff17c397000-7ff17c398000 r--p 00016000 08:06 10888328                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnet.so
+7ff17c398000-7ff17c399000 rw-p 00017000 08:06 10888328                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libnet.so
+7ff17c399000-7ff17c39a000 ---p 00000000 00:00 0 
+7ff17c39a000-7ff17c49a000 rw-p 00000000 00:00 0 
+7ff17c49a000-7ff17c49d000 ---p 00000000 00:00 0 
+7ff17c49d000-7ff17c59b000 rw-p 00000000 00:00 0 
+7ff17c59b000-7ff17c59c000 ---p 00000000 00:00 0 
+7ff17c59c000-7ff17c59f000 ---p 00000000 00:00 0 
+7ff17c59f000-7ff17c69c000 rw-p 00000000 00:00 0 
+7ff17c69c000-7ff17c69d000 ---p 00000000 00:00 0 
+7ff17c69d000-7ff17c6a0000 ---p 00000000 00:00 0 
+7ff17c6a0000-7ff17c79d000 rw-p 00000000 00:00 0 
+7ff17c79d000-7ff17c79e000 ---p 00000000 00:00 0 
+7ff17c79e000-7ff17c7a1000 ---p 00000000 00:00 0 
+7ff17c7a1000-7ff17c89e000 rw-p 00000000 00:00 0 
+7ff17c89e000-7ff17c89f000 ---p 00000000 00:00 0 
+7ff17c89f000-7ff17c8a2000 ---p 00000000 00:00 0 
+7ff17c8a2000-7ff17c99f000 rw-p 00000000 00:00 0 
+7ff17c99f000-7ff17c9a2000 ---p 00000000 00:00 0 
+7ff17c9a2000-7ff17caa0000 rw-p 00000000 00:00 0 
+7ff17caa0000-7ff17d46f000 r--p 00000000 08:06 662140                     /usr/lib/locale/locale-archive
+7ff17d46f000-7ff17d472000 ---p 00000000 00:00 0 
+7ff17d472000-7ff17d570000 rw-p 00000000 00:00 0 
+7ff17d570000-7ff17d573000 ---p 00000000 00:00 0 
+7ff17d573000-7ff17d671000 rw-p 00000000 00:00 0 
+7ff17d671000-7ff17d672000 ---p 00000000 00:00 0 
+7ff17d672000-7ff17f252000 rw-p 00000000 00:00 0 
+7ff17f252000-7ff17f42c000 r--s 03d6f000 08:06 10888034                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/rt.jar
+7ff17f42c000-7ff180000000 rw-p 00000000 00:00 0 
+7ff180000000-7ff180021000 rw-p 00000000 00:00 0 
+7ff180021000-7ff184000000 ---p 00000000 00:00 0 
+7ff184000000-7ff184021000 rw-p 00000000 00:00 0 
+7ff184021000-7ff188000000 ---p 00000000 00:00 0 
+7ff188000000-7ff188021000 rw-p 00000000 00:00 0 
+7ff188021000-7ff18c000000 ---p 00000000 00:00 0 
+7ff18c000000-7ff18c021000 rw-p 00000000 00:00 0 
+7ff18c021000-7ff190000000 ---p 00000000 00:00 0 
+7ff190000000-7ff190021000 rw-p 00000000 00:00 0 
+7ff190021000-7ff194000000 ---p 00000000 00:00 0 
+7ff194000000-7ff194004000 r--s 00026000 08:06 131453                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/kryo-2.20.jar
+7ff194004000-7ff197ed6000 rw-p 00000000 00:00 0 
+7ff197ed6000-7ff197ed7000 ---p 00000000 00:00 0 
+7ff197ed7000-7ff197fd7000 rw-p 00000000 00:00 0 
+7ff197fd7000-7ff197fd8000 ---p 00000000 00:00 0 
+7ff197fd8000-7ff1980d8000 rw-p 00000000 00:00 0 
+7ff1980d8000-7ff1980d9000 ---p 00000000 00:00 0 
+7ff1980d9000-7ff1981d9000 rw-p 00000000 00:00 0 
+7ff1981d9000-7ff1981da000 ---p 00000000 00:00 0 
+7ff1981da000-7ff1982da000 rw-p 00000000 00:00 0 
+7ff1982da000-7ff1982db000 ---p 00000000 00:00 0 
+7ff1982db000-7ff1983db000 rw-p 00000000 00:00 0 
+7ff1983db000-7ff1983dc000 ---p 00000000 00:00 0 
+7ff1983dc000-7ff1984dc000 rw-p 00000000 00:00 0 
+7ff1984dc000-7ff1984dd000 ---p 00000000 00:00 0 
+7ff1984dd000-7ff198607000 rw-p 00000000 00:00 0 
+7ff198607000-7ff19886b000 ---p 00000000 00:00 0 
+7ff19886b000-7ff198895000 rw-p 00000000 00:00 0 
+7ff198895000-7ff198af8000 ---p 00000000 00:00 0 
+7ff198af8000-7ff198b0d000 rw-p 00000000 00:00 0 
+7ff198b0d000-7ff198c3f000 ---p 00000000 00:00 0 
+7ff198c3f000-7ff198c4d000 rw-p 00000000 00:00 0 
+7ff198c4d000-7ff199000000 ---p 00000000 00:00 0 
+7ff199000000-7ff199320000 rwxp 00000000 00:00 0 
+7ff199320000-7ff1a8000000 ---p 00000000 00:00 0 
+7ff1a8000000-7ff1a898a000 rw-p 00000000 00:00 0 
+7ff1a898a000-7ff1ac000000 ---p 00000000 00:00 0 
+7ff1ac000000-7ff1ac007000 r--s 0002d000 08:06 131445                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-messaging-4.10.2.jar
+7ff1ac007000-7ff1ac009000 r--s 00006000 08:06 131439                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-process-services-4.10.2.jar
+7ff1ac009000-7ff1ac00b000 r--s 00000000 08:06 131434                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-jvm-services-4.10.2.jar
+7ff1ac00b000-7ff1ac017000 r--s 00064000 08:06 131446                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-base-services-4.10.2.jar
+7ff1ac017000-7ff1ac08d000 rw-p 00000000 00:00 0 
+7ff1ac08d000-7ff1ac08e000 ---p 00000000 00:00 0 
+7ff1ac08e000-7ff1ac18e000 rw-p 00000000 00:00 0 
+7ff1ac18e000-7ff1ac1a9000 r-xp 00000000 08:06 10888324                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libzip.so
+7ff1ac1a9000-7ff1ac3a8000 ---p 0001b000 08:06 10888324                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libzip.so
+7ff1ac3a8000-7ff1ac3a9000 r--p 0001a000 08:06 10888324                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libzip.so
+7ff1ac3a9000-7ff1ac3aa000 rw-p 0001b000 08:06 10888324                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libzip.so
+7ff1ac3aa000-7ff1ac3b5000 r-xp 00000000 08:06 3937066                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7ff1ac3b5000-7ff1ac5b4000 ---p 0000b000 08:06 3937066                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7ff1ac5b4000-7ff1ac5b5000 r--p 0000a000 08:06 3937066                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7ff1ac5b5000-7ff1ac5b6000 rw-p 0000b000 08:06 3937066                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7ff1ac5b6000-7ff1ac5bc000 rw-p 00000000 00:00 0 
+7ff1ac5bc000-7ff1ac5d3000 r-xp 00000000 08:06 3937060                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7ff1ac5d3000-7ff1ac7d2000 ---p 00017000 08:06 3937060                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7ff1ac7d2000-7ff1ac7d3000 r--p 00016000 08:06 3937060                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7ff1ac7d3000-7ff1ac7d4000 rw-p 00017000 08:06 3937060                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7ff1ac7d4000-7ff1ac7d6000 rw-p 00000000 00:00 0 
+7ff1ac7d6000-7ff1ac7e1000 r-xp 00000000 08:06 3937077                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7ff1ac7e1000-7ff1ac9e0000 ---p 0000b000 08:06 3937077                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7ff1ac9e0000-7ff1ac9e1000 r--p 0000a000 08:06 3937077                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7ff1ac9e1000-7ff1ac9e2000 rw-p 0000b000 08:06 3937077                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7ff1ac9e2000-7ff1ac9ea000 r-xp 00000000 08:06 3937062                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7ff1ac9ea000-7ff1acbea000 ---p 00008000 08:06 3937062                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7ff1acbea000-7ff1acbeb000 r--p 00008000 08:06 3937062                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7ff1acbeb000-7ff1acbec000 rw-p 00009000 08:06 3937062                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7ff1acbec000-7ff1acc18000 r-xp 00000000 08:06 10888318                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libjava.so
+7ff1acc18000-7ff1ace18000 ---p 0002c000 08:06 10888318                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libjava.so
+7ff1ace18000-7ff1ace19000 r--p 0002c000 08:06 10888318                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libjava.so
+7ff1ace19000-7ff1ace1b000 rw-p 0002d000 08:06 10888318                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libjava.so
+7ff1ace1b000-7ff1ace28000 r-xp 00000000 08:06 10888323                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libverify.so
+7ff1ace28000-7ff1ad027000 ---p 0000d000 08:06 10888323                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libverify.so
+7ff1ad027000-7ff1ad029000 r--p 0000c000 08:06 10888323                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libverify.so
+7ff1ad029000-7ff1ad02a000 rw-p 0000e000 08:06 10888323                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/libverify.so
+7ff1ad02a000-7ff1ad031000 r-xp 00000000 08:06 3937117                    /lib/x86_64-linux-gnu/librt-2.27.so
+7ff1ad031000-7ff1ad230000 ---p 00007000 08:06 3937117                    /lib/x86_64-linux-gnu/librt-2.27.so
+7ff1ad230000-7ff1ad231000 r--p 00006000 08:06 3937117                    /lib/x86_64-linux-gnu/librt-2.27.so
+7ff1ad231000-7ff1ad232000 rw-p 00007000 08:06 3937117                    /lib/x86_64-linux-gnu/librt-2.27.so
+7ff1ad232000-7ff1ad3cf000 r-xp 00000000 08:06 3937039                    /lib/x86_64-linux-gnu/libm-2.27.so
+7ff1ad3cf000-7ff1ad5ce000 ---p 0019d000 08:06 3937039                    /lib/x86_64-linux-gnu/libm-2.27.so
+7ff1ad5ce000-7ff1ad5cf000 r--p 0019c000 08:06 3937039                    /lib/x86_64-linux-gnu/libm-2.27.so
+7ff1ad5cf000-7ff1ad5d0000 rw-p 0019d000 08:06 3937039                    /lib/x86_64-linux-gnu/libm-2.27.so
+7ff1ad5d0000-7ff1ae2b8000 r-xp 00000000 08:06 10888346                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/server/libjvm.so
+7ff1ae2b8000-7ff1ae4b7000 ---p 00ce8000 08:06 10888346                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/server/libjvm.so
+7ff1ae4b7000-7ff1ae54d000 r--p 00ce7000 08:06 10888346                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/server/libjvm.so
+7ff1ae54d000-7ff1ae57e000 rw-p 00d7d000 08:06 10888346                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/amd64/server/libjvm.so
+7ff1ae57e000-7ff1ae5b9000 rw-p 00000000 00:00 0 
+7ff1ae5b9000-7ff1ae7a0000 r-xp 00000000 08:06 3936976                    /lib/x86_64-linux-gnu/libc-2.27.so
+7ff1ae7a0000-7ff1ae9a0000 ---p 001e7000 08:06 3936976                    /lib/x86_64-linux-gnu/libc-2.27.so
+7ff1ae9a0000-7ff1ae9a4000 r--p 001e7000 08:06 3936976                    /lib/x86_64-linux-gnu/libc-2.27.so
+7ff1ae9a4000-7ff1ae9a6000 rw-p 001eb000 08:06 3936976                    /lib/x86_64-linux-gnu/libc-2.27.so
+7ff1ae9a6000-7ff1ae9aa000 rw-p 00000000 00:00 0 
+7ff1ae9aa000-7ff1ae9ad000 r-xp 00000000 08:06 3936999                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7ff1ae9ad000-7ff1aebac000 ---p 00003000 08:06 3936999                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7ff1aebac000-7ff1aebad000 r--p 00002000 08:06 3936999                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7ff1aebad000-7ff1aebae000 rw-p 00003000 08:06 3936999                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7ff1aebae000-7ff1aebc5000 r-xp 00000000 08:06 9054391                    /usr/lib/jvm/jdk1.8.0_201/lib/amd64/jli/libjli.so
+7ff1aebc5000-7ff1aedc4000 ---p 00017000 08:06 9054391                    /usr/lib/jvm/jdk1.8.0_201/lib/amd64/jli/libjli.so
+7ff1aedc4000-7ff1aedc5000 r--p 00016000 08:06 9054391                    /usr/lib/jvm/jdk1.8.0_201/lib/amd64/jli/libjli.so
+7ff1aedc5000-7ff1aedc6000 rw-p 00017000 08:06 9054391                    /usr/lib/jvm/jdk1.8.0_201/lib/amd64/jli/libjli.so
+7ff1aedc6000-7ff1aede0000 r-xp 00000000 08:06 3937109                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7ff1aede0000-7ff1aefdf000 ---p 0001a000 08:06 3937109                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7ff1aefdf000-7ff1aefe0000 r--p 00019000 08:06 3937109                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7ff1aefe0000-7ff1aefe1000 rw-p 0001a000 08:06 3937109                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7ff1aefe1000-7ff1aefe5000 rw-p 00000000 00:00 0 
+7ff1aefe5000-7ff1af00c000 r-xp 00000000 08:06 3936948                    /lib/x86_64-linux-gnu/ld-2.27.so
+7ff1af00c000-7ff1af00e000 r--s 00006000 08:06 131463                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/jsr305-2.0.1.jar
+7ff1af00e000-7ff1af011000 r--s 0001a000 08:06 131464                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/fastutil-7.2.1-min.jar
+7ff1af011000-7ff1af015000 r--s 0002a000 08:06 131456                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/commons-io-2.4.jar
+7ff1af015000-7ff1af022000 r--s 00068000 08:06 131428                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/gradle-launcher-4.10.2.jar
+7ff1af022000-7ff1af0ed000 rw-p 00000000 00:00 0 
+7ff1af0ed000-7ff1af0ee000 ---p 00000000 00:00 0 
+7ff1af0ee000-7ff1af0f1000 ---p 00000000 00:00 0 
+7ff1af0f1000-7ff1af1f2000 rw-p 00000000 00:00 0 
+7ff1af1f2000-7ff1af1f3000 r--s 00000000 08:06 131465                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/jcip-annotations-1.0.jar
+7ff1af1f3000-7ff1af1f5000 r--s 0001a000 08:06 131455                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/asm-6.2.jar
+7ff1af1f5000-7ff1af1f6000 r--s 00009000 08:06 131461                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/slf4j-api-1.7.16.jar
+7ff1af1f6000-7ff1af1fb000 r--s 00041000 08:06 131457                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/commons-lang-2.6.jar
+7ff1af1fb000-7ff1af1fc000 r--s 00004000 08:06 131474                     /home/ermicho/.gradle/wrapper/dists/gradle-4.10.2-all/9fahxiiecdb76a5g3aw9oi8rv/gradle-4.10.2/lib/ant-launcher-1.9.11.jar
+7ff1af1fc000-7ff1af200000 r--s 000a1000 08:06 10888039                   /usr/lib/jvm/jdk1.8.0_201/jre/lib/jsse.jar
+7ff1af200000-7ff1af202000 r--s 0000c000 08:06 4280447                    /home/ermicho/projects/react-native/TodoApp/android/gradle/wrapper/gradle-wrapper.jar
+7ff1af202000-7ff1af20a000 rw-s 00000000 08:06 13139568                   /tmp/hsperfdata_ermicho/3796
+7ff1af20a000-7ff1af20b000 rw-p 00000000 00:00 0 
+7ff1af20b000-7ff1af20c000 r--p 00000000 00:00 0 
+7ff1af20c000-7ff1af20d000 r--p 00027000 08:06 3936948                    /lib/x86_64-linux-gnu/ld-2.27.so
+7ff1af20d000-7ff1af20e000 rw-p 00028000 08:06 3936948                    /lib/x86_64-linux-gnu/ld-2.27.so
+7ff1af20e000-7ff1af20f000 rw-p 00000000 00:00 0 
+7ffe637c8000-7ffe637eb000 rw-p 00000000 00:00 0                          [stack]
+7ffe637f2000-7ffe637f5000 r--p 00000000 00:00 0                          [vvar]
+7ffe637f5000-7ffe637f7000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dorg.gradle.appname=gradlew 
+java_command: org.gradle.wrapper.GradleWrapperMain app:installDebug
+java_class_path (initial): /home/ermicho/projects/react-native/TodoApp/android/gradle/wrapper/gradle-wrapper.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_201
+PATH=/home/ermicho/projects/react-native/TodoApp/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/ermicho/projects/react-native/TodoApp/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ermicho/Android/Sdk/tools:/home/ermicho/Android/Sdk/tools/bin:/home/ermicho/Android/Sdk/platform-tools:/home/ermicho/Android/Sdk/emulator:/home/ermicho/Android/Sdk/tools/bin:/home/ermicho/Android/Sdk/platform-tools
+USERNAME=ermicho
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xad3e60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xad3e60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x90b880], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x90b880], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x90b880], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x90b880], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x90b750], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x90bd70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x90bd70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x90bd70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x90bd70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.2 LTS"
+
+uname:Linux 4.15.0-46-generic #49-Ubuntu SMP Wed Feb 6 09:33:07 UTC 2019 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 30711, NOFILE 4096, AS infinity
+load average:3.89 2.44 2.06
+
+/proc/meminfo:
+MemTotal:        8021608 kB
+MemFree:          129980 kB
+MemAvailable:     681852 kB
+Buffers:            5528 kB
+Cached:          1301412 kB
+SwapCached:         1948 kB
+Active:          6000052 kB
+Inactive:        1367748 kB
+Active(anon):    5811164 kB
+Inactive(anon):   878092 kB
+Active(file):     188888 kB
+Inactive(file):   489656 kB
+Unevictable:         344 kB
+Mlocked:             344 kB
+SwapTotal:       2097148 kB
+SwapFree:        2002940 kB
+Dirty:             28156 kB
+Writeback:          2200 kB
+AnonPages:       6060536 kB
+Mapped:           645080 kB
+Shmem:            635260 kB
+Slab:             274272 kB
+SReclaimable:     181152 kB
+SUnreclaim:        93120 kB
+KernelStack:       28480 kB
+PageTables:       104720 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6107952 kB
+Committed_AS:   19995148 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      351684 kB
+DirectMap2M:     7890944 kB
+DirectMap1G:     1048576 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-7
+cpu_memory_nodes: 0
+active_processor_count: 8
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 7547330560
+memory_max_usage_in_bytes: 229744640
+
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3203.163
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3113.182
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3168.852
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3125.053
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3141.668
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3142.394
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3161.289
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0x96
+cpu MHz		: 3125.812
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8021608k(121464k free), swap 2097148k(2002940k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.201-b09) for linux-amd64 JRE (1.8.0_201-b09), built on Dec 15 2018 11:35:59 by "java_re" with gcc 7.3.0
+
+time: Sun Mar 17 18:43:41 2019
+timezone: IST
+elapsed time: 5 seconds (0d 0h 0m 5s)
+
